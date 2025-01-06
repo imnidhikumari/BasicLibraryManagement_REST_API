@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 import lombok.AccessLevel;
-import  lombok.Data;
+import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
 @Entity

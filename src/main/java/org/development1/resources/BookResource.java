@@ -56,7 +56,7 @@ public class BookResource {
     }
 
     @GET
-    @Path("/{id}")
+    @Path("id/{id}")
     public Response getBookById(@PathParam("id") Long id){
         final Timer.Context context = getBooksByIdTimer.time();
         try{
@@ -69,7 +69,7 @@ public class BookResource {
     }
 
     @GET
-    @Path("/{title}")
+    @Path("title/{title}")
     public Response getBookById(@PathParam("title") String title){
         final Timer.Context context = getBooksByTitleTimer.time();
         try{

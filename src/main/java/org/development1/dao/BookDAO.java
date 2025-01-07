@@ -50,15 +50,17 @@ public class BookDAO {
             }
         }
 
-        public List<Book> getBooksByTitle(String Title){
-            try(Session session = sessionFactory.openSession()) {
-                return session.createQuery("FROM Book WHERE title= :Title", Book.class)
-                        .setParameter("title",Title)
-                        .list();
-            } catch (Exception e) {
-                throw new RuntimeException("Error getting books by title" + Title, e);
-            }
-
+    public List<Book> getBooksByTitle(String title) {
+        try (Session session = sessionFactory.openSession()) {
+            return session.createQuery("FROM Book WHERE title LIKE :title", Book.class)
+                    .setParameter("title", "%" + title + "%")
+                    .list();
+        } catch (Exception e) {
+            // Log the exception for debugging
+            e.printStackTrace();
+            throw new RuntimeException("Error getting books by title: " + title, e);
         }
+    }
+
 
 }

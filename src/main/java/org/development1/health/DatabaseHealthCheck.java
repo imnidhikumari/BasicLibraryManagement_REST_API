@@ -8,7 +8,7 @@ public class DatabaseHealthCheck extends HealthCheck{
     private final SessionFactory sessionFactory;
 
     public DatabaseHealthCheck(SessionFactory sessionFactory){
-        this.sessionFactory=sessionFactory;
+        this.sessionFactory = sessionFactory;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class DatabaseHealthCheck extends HealthCheck{
             sessionFactory.openSession().close();
             return Result.healthy();
         }catch(Exception e){
-            return Result.healthy("Unable to establish a connection to the database");
+            return Result.unhealthy("Unable to establish a connection to the database");
         }
     }
 }

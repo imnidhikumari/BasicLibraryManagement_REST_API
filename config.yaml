@@ -9,8 +9,8 @@ logging:
       timeZone: UTC
       logFormat: "[%d{HH:mm:ss.SSS}][%-5level] %logger{36} - %msg%n"
 database:
-  dialect: org.hibernate.dialect.MySQLDialect
+  dialect: org.hibernate.dialect.MySQL8Dialect
+  url: jdbc:mysql://localhost:3306/library_database
   driverClass: com.mysql.cj.jdbc.Driver
   user: root
-  password: root@123
-  url: jdbc:mysql://localhost:3306/library-database
+  password: Shiv@123

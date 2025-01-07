@@ -1,0 +1,1105 @@
+[18:27:57.930][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[18:27:57.931][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[18:27:57.951][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[18:27:58.014][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[18:27:58.070][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[18:27:58.073][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[18:27:58.073][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[18:27:58.073][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[18:27:58.074][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[18:27:58.344][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[18:27:58.582][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[18:27:58.605][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[18:27:58.605][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[18:27:58.636][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@2c7ad4f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[18:27:58.636][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@698f4aa{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[18:27:58.636][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[18:27:58.795][ERROR] org.glassfish.jersey.internal.Errors - Following issues have been detected: 
+WARNING: A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.
+
+[18:27:58.796][WARN ] o.e.j.s.handler.ContextHandler.ROOT - unavailable
+org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@7d80e1b3']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+[18:27:58.797][ERROR] io.dropwizard.cli.ServerCommand - Unable to start server, shutting down
+javax.servlet.ServletException: io.dropwizard.jersey.setup.JerseyServletContainer-6335f04a@20cfc074==io.dropwizard.jersey.setup.JerseyServletContainer,jsp=null,order=1,inst=true,async=true
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:617)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+Caused by: org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@7d80e1b3']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	... 49 common frames omitted
+[18:27:58.799][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@1feb76b9{/,null,UNAVAILABLE}
+[18:28:04.594][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[18:28:04.595][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[18:28:04.612][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[18:28:04.671][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[18:28:04.716][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[18:28:04.718][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[18:28:04.718][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[18:28:04.718][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[18:28:04.719][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[18:28:04.882][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[18:28:05.092][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[18:28:05.113][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[18:28:05.113][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[18:28:05.139][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@79f1e22e{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[18:28:05.139][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@6903ed0e{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[18:28:05.140][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[18:28:05.272][ERROR] org.glassfish.jersey.internal.Errors - Following issues have been detected: 
+WARNING: A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.
+
+[18:28:05.272][WARN ] o.e.j.s.handler.ContextHandler.ROOT - unavailable
+org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@611a2d82']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+[18:28:05.273][ERROR] io.dropwizard.cli.ServerCommand - Unable to start server, shutting down
+javax.servlet.ServletException: io.dropwizard.jersey.setup.JerseyServletContainer-2aa6bbad@5135a665==io.dropwizard.jersey.setup.JerseyServletContainer,jsp=null,order=1,inst=true,async=true
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:617)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+Caused by: org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@611a2d82']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	... 49 common frames omitted
+[18:28:05.276][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@153c6603{/,null,UNAVAILABLE}
+[18:36:08.696][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[18:36:08.697][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[18:36:08.710][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[18:36:08.758][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[18:36:08.805][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[18:36:08.807][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[18:36:08.807][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[18:36:08.807][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[18:36:08.808][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[18:36:08.967][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[18:36:09.161][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[18:36:09.182][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[18:36:09.182][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[18:36:09.209][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[18:36:09.209][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[18:36:09.210][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[18:36:09.341][ERROR] org.glassfish.jersey.internal.Errors - Following issues have been detected: 
+WARNING: A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.
+
+[18:36:09.341][WARN ] o.e.j.s.handler.ContextHandler.ROOT - unavailable
+org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@598e5cb8']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+[18:36:09.342][ERROR] io.dropwizard.cli.ServerCommand - Unable to start server, shutting down
+javax.servlet.ServletException: io.dropwizard.jersey.setup.JerseyServletContainer-7afbf2a0@6390e91f==io.dropwizard.jersey.setup.JerseyServletContainer,jsp=null,order=1,inst=true,async=true
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:617)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:425)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:822)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.doStart(InstrumentedHandler.java:110)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.doStart(GzipHandler.java:425)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.doStart(StatisticsHandler.java:255)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:100)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+	at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:45)
+	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:87)
+	at io.dropwizard.cli.Cli.run(Cli.java:79)
+	at io.dropwizard.Application.run(Application.java:94)
+	at org.development1.LibraryApplication.main(LibraryApplication.java:26)
+Caused by: org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.String) and public javax.ws.rs.core.Response org.development1.resources.BookResource.getBookById(java.lang.Long) at matching regular expression /([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@598e5cb8']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:371)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:293)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:292)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:259)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:154)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:346)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:203)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:599)
+	... 49 common frames omitted
+[18:36:09.344][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@2aafa84f{/,null,UNAVAILABLE}
+[18:45:07.644][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[18:45:07.645][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[18:45:07.659][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[18:45:07.707][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[18:45:07.753][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[18:45:07.757][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[18:45:07.757][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[18:45:07.757][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[18:45:07.758][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[18:45:07.956][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[18:45:08.165][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[18:45:08.186][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[18:45:08.187][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[18:45:08.215][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@e154848{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[18:45:08.215][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@16ea0f22{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[18:45:08.215][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[18:45:08.363][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[18:45:08.363][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@47d9c01{/,null,AVAILABLE}
+[18:45:08.364][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[18:45:08.366][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@26bce60d{/,null,AVAILABLE}
+[18:45:08.373][INFO ] o.e.jetty.server.AbstractConnector - Started application@e154848{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[18:45:08.373][INFO ] o.e.jetty.server.AbstractConnector - Started admin@16ea0f22{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[18:45:08.373][INFO ] org.eclipse.jetty.server.Server - Started @1362ms
+[19:06:11.816][ERROR] i.d.j.errors.LoggingExceptionMapper - Error handling a request: 8ac46fdb13540599
+java.lang.RuntimeException: Error getting books by titleTrain to Pakistan
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:59)
+	at org.development1.resources.BookResource.getBookById(BookResource.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:767)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Could not locate named parameter [title], expecting one of [Title]
+	at org.hibernate.query.internal.ParameterMetadataImpl.getNamedParameterDescriptor(ParameterMetadataImpl.java:229)
+	at org.hibernate.query.internal.ParameterMetadataImpl.getQueryParameter(ParameterMetadataImpl.java:198)
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.getBinding(QueryParameterBindingsImpl.java:189)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:494)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:115)
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:56)
+	... 63 common frames omitted
+[19:06:36.730][ERROR] i.d.j.errors.LoggingExceptionMapper - Error handling a request: 5b3ac5022c16da13
+java.lang.RuntimeException: Error getting books by title"Train to Pakistan"
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:59)
+	at org.development1.resources.BookResource.getBookById(BookResource.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:767)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Could not locate named parameter [title], expecting one of [Title]
+	at org.hibernate.query.internal.ParameterMetadataImpl.getNamedParameterDescriptor(ParameterMetadataImpl.java:229)
+	at org.hibernate.query.internal.ParameterMetadataImpl.getQueryParameter(ParameterMetadataImpl.java:198)
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.getBinding(QueryParameterBindingsImpl.java:189)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:494)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:115)
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:56)
+	... 63 common frames omitted
+[19:08:22.785][ERROR] i.d.j.errors.LoggingExceptionMapper - Error handling a request: f2569ada47ba5557
+java.lang.RuntimeException: Error getting books by titleTrain to Pakistan
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:59)
+	at org.development1.resources.BookResource.getBookById(BookResource.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:767)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Could not locate named parameter [title], expecting one of [Title]
+	at org.hibernate.query.internal.ParameterMetadataImpl.getNamedParameterDescriptor(ParameterMetadataImpl.java:229)
+	at org.hibernate.query.internal.ParameterMetadataImpl.getQueryParameter(ParameterMetadataImpl.java:198)
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.getBinding(QueryParameterBindingsImpl.java:189)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:494)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:115)
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:56)
+	... 58 common frames omitted
+[19:10:10.979][ERROR] i.d.j.errors.LoggingExceptionMapper - Error handling a request: f89b916ba5aa97b6
+java.lang.RuntimeException: Error getting books by titleTrain to Pakistan
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:59)
+	at org.development1.resources.BookResource.getBookById(BookResource.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:767)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Could not locate named parameter [title], expecting one of [Title]
+	at org.hibernate.query.internal.ParameterMetadataImpl.getNamedParameterDescriptor(ParameterMetadataImpl.java:229)
+	at org.hibernate.query.internal.ParameterMetadataImpl.getQueryParameter(ParameterMetadataImpl.java:198)
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.getBinding(QueryParameterBindingsImpl.java:189)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:494)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:115)
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:56)
+	... 63 common frames omitted
+[19:14:22.971][ERROR] i.d.j.errors.LoggingExceptionMapper - Error handling a request: 7cf48c57b3663eda
+java.lang.RuntimeException: Error getting books by titlenidhiBook
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:59)
+	at org.development1.resources.BookResource.getBookById(BookResource.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:767)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Could not locate named parameter [title], expecting one of [Title]
+	at org.hibernate.query.internal.ParameterMetadataImpl.getNamedParameterDescriptor(ParameterMetadataImpl.java:229)
+	at org.hibernate.query.internal.ParameterMetadataImpl.getQueryParameter(ParameterMetadataImpl.java:198)
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.getBinding(QueryParameterBindingsImpl.java:189)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:494)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:115)
+	at org.development1.dao.BookDAO.getBooksByTitle(BookDAO.java:56)
+	... 63 common frames omitted
+[19:19:15.845][INFO ] o.e.jetty.server.AbstractConnector - Stopped application@e154848{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:19:15.847][INFO ] o.e.jetty.server.AbstractConnector - Stopped admin@16ea0f22{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:19:15.849][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@26bce60d{/,null,UNAVAILABLE}
+[19:19:15.855][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@47d9c01{/,null,UNAVAILABLE}
+[19:20:51.482][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[19:20:51.483][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[19:20:51.498][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[19:20:51.551][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[19:20:51.600][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[19:20:51.603][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[19:20:51.603][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[19:20:51.603][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[19:20:51.604][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[19:20:51.843][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[19:20:52.061][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[19:20:52.255][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[19:20:52.256][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[19:20:52.326][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@2c7ad4f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:20:52.326][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@698f4aa{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:20:52.327][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[19:20:52.708][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[19:20:52.710][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@62a41279{/,null,AVAILABLE}
+[19:20:52.712][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[19:20:52.717][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@1dd247b{/,null,AVAILABLE}
+[19:20:52.726][INFO ] o.e.jetty.server.AbstractConnector - Started application@2c7ad4f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:20:52.727][INFO ] o.e.jetty.server.AbstractConnector - Started admin@698f4aa{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:20:52.727][INFO ] org.eclipse.jetty.server.Server - Started @1990ms
+[19:25:39.018][INFO ] o.e.jetty.server.AbstractConnector - Stopped application@2c7ad4f3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:25:39.020][INFO ] o.e.jetty.server.AbstractConnector - Stopped admin@698f4aa{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:25:39.022][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@1dd247b{/,null,UNAVAILABLE}
+[19:25:39.029][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@62a41279{/,null,UNAVAILABLE}
+[19:26:17.125][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[19:26:17.126][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[19:26:17.139][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[19:26:17.185][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[19:26:17.230][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[19:26:17.233][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[19:26:17.233][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[19:26:17.233][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[19:26:17.234][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[19:26:17.396][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[19:26:17.592][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[19:26:17.613][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[19:26:17.613][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[19:26:17.641][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@67afe909{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:26:17.641][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@79f1e22e{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:26:17.642][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[19:26:17.789][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[19:26:17.790][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@47d9c01{/,null,AVAILABLE}
+[19:26:17.791][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[19:26:17.792][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@26bce60d{/,null,AVAILABLE}
+[19:26:17.798][INFO ] o.e.jetty.server.AbstractConnector - Started application@67afe909{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:26:17.799][INFO ] o.e.jetty.server.AbstractConnector - Started admin@79f1e22e{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:26:17.799][INFO ] org.eclipse.jetty.server.Server - Started @1288ms
+[19:30:03.825][INFO ] o.e.jetty.server.AbstractConnector - Stopped application@67afe909{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:30:03.826][INFO ] o.e.jetty.server.AbstractConnector - Stopped admin@79f1e22e{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:30:03.827][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@26bce60d{/,null,UNAVAILABLE}
+[19:30:03.833][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@47d9c01{/,null,UNAVAILABLE}
+[19:30:29.835][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[19:30:29.835][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[19:30:29.849][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[19:30:29.897][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[19:30:29.940][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[19:30:29.942][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[19:30:29.942][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[19:30:29.942][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[19:30:29.943][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[19:30:30.114][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[19:30:30.314][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[19:30:30.336][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[19:30:30.336][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[19:30:30.366][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:30:30.366][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:30:30.367][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[19:30:30.516][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[19:30:30.516][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@6c36051c{/,null,AVAILABLE}
+[19:30:30.517][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[19:30:30.519][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@775edae0{/,null,AVAILABLE}
+[19:30:30.525][INFO ] o.e.jetty.server.AbstractConnector - Started application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:30:30.525][INFO ] o.e.jetty.server.AbstractConnector - Started admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:30:30.526][INFO ] org.eclipse.jetty.server.Server - Started @1348ms
+[19:32:31.498][INFO ] o.e.jetty.server.AbstractConnector - Stopped application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:32:31.498][INFO ] o.e.jetty.server.AbstractConnector - Stopped admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:32:31.499][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@775edae0{/,null,UNAVAILABLE}
+[19:32:31.505][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@6c36051c{/,null,UNAVAILABLE}
+[19:32:34.786][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[19:32:34.787][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[19:32:34.799][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[19:32:34.844][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[19:32:34.887][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[19:32:34.888][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[19:32:34.888][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[19:32:34.888][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[19:32:34.889][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[19:32:35.050][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[19:32:35.235][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[19:32:35.256][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[19:32:35.256][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[19:32:35.283][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@752973de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:32:35.283][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@52a67293{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:32:35.284][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[19:32:35.429][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[19:32:35.430][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@460e5ffe{/,null,AVAILABLE}
+[19:32:35.431][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[19:32:35.432][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@7747cc1b{/,null,AVAILABLE}
+[19:32:35.438][INFO ] o.e.jetty.server.AbstractConnector - Started application@752973de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:32:35.439][INFO ] o.e.jetty.server.AbstractConnector - Started admin@52a67293{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:32:35.439][INFO ] org.eclipse.jetty.server.Server - Started @1241ms
+[19:35:24.437][INFO ] o.e.jetty.server.AbstractConnector - Stopped application@752973de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:35:24.438][INFO ] o.e.jetty.server.AbstractConnector - Stopped admin@52a67293{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:35:24.439][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@7747cc1b{/,null,UNAVAILABLE}
+[19:35:24.451][INFO ] o.e.j.server.handler.ContextHandler - Stopped i.d.j.MutableServletContextHandler@460e5ffe{/,null,UNAVAILABLE}
+[19:35:50.916][INFO ] i.d.server.DefaultServerFactory - Registering jersey handler with root path prefix: /
+[19:35:50.917][INFO ] i.d.server.DefaultServerFactory - Registering admin handler with root path prefix: /
+[19:35:50.930][INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.31.Final
+[19:35:50.977][INFO ] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[19:35:51.021][WARN ] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[19:35:51.023][INFO ] o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library_database]
+[19:35:51.023][INFO ] o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+[19:35:51.023][INFO ] o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+[19:35:51.024][INFO ] o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[19:35:51.186][INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[19:35:51.384][INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[19:35:51.407][INFO ] org.development1.LibraryApplication - Library Management Application startted successfully
+[19:35:51.407][INFO ] io.dropwizard.server.ServerFactory - Starting LibraryManagement
+[19:35:51.437][INFO ] o.e.jetty.setuid.SetUIDListener - Opened application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:35:51.437][INFO ] o.e.jetty.setuid.SetUIDListener - Opened admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:35:51.438][INFO ] org.eclipse.jetty.server.Server - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 21.0.5+9-LTS-239
+[19:35:51.587][INFO ] i.d.jersey.DropwizardResourceConfig - The following paths were found for the configured resources:
+
+    GET     /books (org.development1.resources.BookResource)
+    POST    /books (org.development1.resources.BookResource)
+    GET     /books/id/{id} (org.development1.resources.BookResource)
+    GET     /books/title/{title} (org.development1.resources.BookResource)
+
+[19:35:51.588][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@6c36051c{/,null,AVAILABLE}
+[19:35:51.589][INFO ] io.dropwizard.setup.AdminEnvironment - tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+[19:35:51.590][INFO ] o.e.j.server.handler.ContextHandler - Started i.d.j.MutableServletContextHandler@775edae0{/,null,AVAILABLE}
+[19:35:51.596][INFO ] o.e.jetty.server.AbstractConnector - Started application@27dbaa33{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[19:35:51.597][INFO ] o.e.jetty.server.AbstractConnector - Started admin@15d65fcf{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+[19:35:51.597][INFO ] org.eclipse.jetty.server.Server - Started @1327ms
+[19:36:01.060][WARN ] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+[19:36:01.060][ERROR] o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry '131' for key 'books.isbn'
+[19:36:01.065][ERROR] i.d.j.e.IllegalStateExceptionMapper - Error handling a request: 51549f8f1e3f9882
+java.lang.IllegalStateException: org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl@e67e1a1 is closed
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.errorIfClosed(AbstractLogicalConnectionImplementor.java:37)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:137)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:276)
+	at org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor.rollback(AbstractLogicalConnectionImplementor.java:121)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.rollback(JdbcResourceLocalTransactionCoordinatorImpl.java:304)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.rollback(TransactionImpl.java:142)
+	at org.development1.dao.BookDAO.addBook(BookDAO.java:31)
+	at org.development1.resources.BookResource.addBook(BookResource.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:35)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:47)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:41)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:249)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:717)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:54)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

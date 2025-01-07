@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.flipkart</groupId>
-    <artifactId>Sample_dropwizard</artifactId>
+    <groupId>org.development1</groupId>
+    <artifactId>library1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>BookHub</name>
+    <name>LibraryManagement</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dropwizard.version>2.0.0</dropwizard.version>
-        <mainClass>com.flipkart.BookHubApplication</mainClass>
+        <mainClass>org.development1.LibraryApplication</mainClass>
     </properties>
 
     <dependencyManagement>
